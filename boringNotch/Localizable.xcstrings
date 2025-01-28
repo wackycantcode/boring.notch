@@ -100,6 +100,9 @@
     "Always show tabs" : {
 
     },
+    "Animation style" : {
+
+    },
     "App icon" : {
 
     },
@@ -162,6 +165,9 @@
           }
         }
       }
+    },
+    "Bouncy" : {
+
     },
     "Buy Me a Coffee" : {
       "extractionState" : "stale",
@@ -759,6 +765,9 @@
 
     },
     "Slider color" : {
+
+    },
+    "Smooth" : {
 
     },
     "Sneak Peek shows the media title and artist under the notch for a few seconds." : {

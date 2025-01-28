@@ -35,6 +35,8 @@ struct ContentView: View {
     @Default(.useMusicVisualizer) var useMusicVisualizer
 
     @Default(.showNotHumanFace) var showNotHumanFace
+    
+    @Default(.animationStyle) var animationStyle
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -47,8 +49,8 @@ struct ContentView: View {
                     NotchShape(cornerRadius: ((vm.notchState == .open) && Defaults[.cornerRadiusScaling]) ? cornerRadiusInsets.opened : cornerRadiusInsets.closed).drawingGroup()
                 }
                 .padding(.bottom, vm.notchState == .open ? 30 : 0) // Safe area to ensure the notch does not close if the cursor is within 30px of the notch from the bottom.
-                .animation(.bouncy.speed(1.2), value: hoverAnimation)
-                .animation(.bouncy.speed(1.2), value: vm.notchState)
+                .animation(animationStyle == AnimationStyleEnum.bouncy ? .bouncy.speed(1.2) : .smooth.speed(1.2), value: hoverAnimation)
+                .animation(animationStyle == AnimationStyleEnum.bouncy ? .bouncy.speed(1.2) : .smooth.speed(1.2), value: vm.notchState)
                 .animation(.smooth, value: gestureProgress)
                 .transition(.blurReplace.animation(.interactiveSpring(dampingFraction: 1)))
                 .allowsHitTesting(true)

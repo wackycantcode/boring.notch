@@ -63,6 +63,7 @@ extension Defaults.Keys {
     //static let alwaysShowTabs = Key<Bool>("alwaysShowTabs", default: true)
     static let showMirror = Key<Bool>("showMirror", default: false)
     static let mirrorShape = Key<MirrorShapeEnum>("mirrorShape", default: MirrorShapeEnum.rectangle)
+    static let animationStyle = Key<AnimationStyleEnum>("animationStyle", default: AnimationStyleEnum.bouncy)
     static let settingsIconInNotch = Key<Bool>("settingsIconInNotch", default: false)
     static let lightingEffect = Key<Bool>("lightingEffect", default: true)
     static let accentColor = Key<Color>("accentColor", default: Color.blue)

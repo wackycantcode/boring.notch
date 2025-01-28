@@ -45,6 +45,11 @@ enum DownloadIndicatorStyle: String, Defaults.Serializable {
     case percentage = "Percentage"
 }
 
+enum AnimationStyleEnum: String, Defaults.Serializable {
+    case bouncy = "Bouncy"
+    case smooth = "Smooth"
+}
+
 enum DownloadIconStyle: String, Defaults.Serializable {
     case onlyAppIcon = "Only app icon"
     case onlyIcon = "Only download icon"

@@ -753,6 +753,7 @@ struct Appearance: View {
     @Default(.useMusicVisualizer) var useMusicVisualizer
     @Default(.customVisualizers) var customVisualizers
     @Default(.selectedVisualizer) var selectedVisualizer
+    @Default(.animationStyle) var animationStyle
     let icons: [String] = ["logo2"]
     @State private var selectedIcon: String = "logo2"
     @State private var selectedListVisualizer: CustomVisualizer? = nil
@@ -962,6 +963,12 @@ struct Appearance: View {
                         .tag(MirrorShapeEnum.circle)
                     Text("Square")
                         .tag(MirrorShapeEnum.rectangle)
+                }
+                Picker("Animation style", selection: $animationStyle) {
+                    Text("Bouncy")
+                        .tag(AnimationStyleEnum.bouncy)
+                    Text("Smooth")
+                        .tag(AnimationStyleEnum.smooth)
                 }
                 Defaults.Toggle("Show cool face animation while inactivity", key: .showNotHumanFace)
             } header: {
